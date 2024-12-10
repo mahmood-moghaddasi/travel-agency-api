@@ -43,8 +43,6 @@ const startServer = (port = 3000) => {
   });
 };
 
-startServer();
-
 app.use(require("./routes/dev"));
 app.use("/auth", require("./routes/auth"));
 app.use("/tour", require("./routes/tour"));
@@ -55,5 +53,7 @@ app.use("/order", require("./routes/order"));
 app.get("/", (req, res) => {
   res.send("Welcome to the Tour and Travel Agency API!");
 });
+
+startServer();
 
 export default app;
