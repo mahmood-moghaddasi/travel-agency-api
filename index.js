@@ -43,7 +43,7 @@ const startServer = (port = 3000) => {
   });
 };
 
-// startServer(PORT);
+startServer();
 
 app.use(require("./routes/dev"));
 app.use("/auth", require("./routes/auth"));
